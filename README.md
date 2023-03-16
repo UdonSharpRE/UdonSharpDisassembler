@@ -1,3 +1,5 @@
+(中文)[https://github.com/extremeblackliu/UdonSharpDisassembler/blob/main/README_cn.md]
+
 # UdonSharpDisassembler
 VRChat World Script UdonSharp(U#) Disassembler
 
