@@ -5,7 +5,7 @@ VRChat World Script UdonSharp(U#) Disassembler
 
 # NOTE
 
-the code was written with library (IL2CPP_Resolver)[https://github.com/sneakyevil/IL2CPP_Resolver]
+the code was written with library [IL2CPP_Resolver](https://github.com/sneakyevil/IL2CPP_Resolver)
 
 due to EAC(Easy Anti-Cheat) exists, so you need find the way use the code yourself. i will not give help
 
