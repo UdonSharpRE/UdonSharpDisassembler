@@ -1,24 +1,24 @@
-# UdonSharpDisassembler
-VRChat World Script UdonSharp(U#) Disassembler
+# UdonSharp 反汇编器
+VRChat地图脚本 UdonSharp(U#) 的反汇编器
 
-# NOTE
+# 笔记
 
-the code was written with library (IL2CPP_Resolver)[https://github.com/sneakyevil/IL2CPP_Resolver]
+上面的代码使用了 (IL2CPP_Resolver)[https://github.com/sneakyevil/IL2CPP_Resolver]
 
-due to EAC(Easy Anti-Cheat) exists, so you need find the way use the code yourself. i will not give help
+由于 EAC(Easy Anti-Cheat) 的存在，所以你需要自己找办法使用这段代码，我不会帮你的。
 
-# Information
+# 资料
 
-by the default, Disassembler will dump 3 files WITHOUT postfix, they are ObjectName, bin_ObjectName, const_ObjectName
+反汇编器运行后将会产生三个没有后缀的文件，他们分别是 ObjectName, bin_ObjectName, const_ObjectName
 
-* ObjectName - contains Disassembled assembly code
-* bin_ObjectName - contains origin Opcode of the UdonSharp Script
-* const_ObjectName - contains every constants in the UdonSharp Script
+* ObjectName - 生成的反汇编代码
+* bin_ObjectName - UdonSharp的Opcode
+* const_ObjectName - 每个在该UdonSharp里面的常量
 
-this is examples output of those 3 files:
+以下是示例结果：
 
 ```
-// ObjectName(example of Update function)
+// ObjectName(以Update函数为例)
 .func__update
 0x00000000000003F0  PUSH 0x0000000000000013(__0_const_intnl_SystemUInt32[System.UInt32])
 0x00000000000003F8  PUSH 0x0000000000000003(m_iCount[System.Int32])
@@ -37,7 +37,7 @@ this is examples output of those 3 files:
 ```
 
 ```
-// bin_ObjectName(opened part of the binary with HxD Hex Editor)
+// bin_ObjectName(使用HxD十六进制编辑器打开后的部分结果)
 00 00 00 01 00 00 00 13 00 00 00 01 00 00 00 07 00 00 00 01 00 00 00 02 00 00 00 09 00 00 00 01 00 00 00 0F 00 00 00 01 00 00 00 03 00 00 00 09 00 00 00 01 00 00 00 03 00 00 00 01 00 00 00 0E 00 00 00 01 00 00 00 17 00 00 00 06 00 00 00 23 00 00 00 01 00 00 00 17 00 00 00 04 00 00 01 40 00 00 00 01 00 00 00 03 00 00 00 01 00 00 00 0D 00 00 00 01 00 00 00 1C 00 00 00 06 00 00 00 24 00 00 00 01 00 00 00 1C 00 00 00 01 00 00 00 03 00 00 00 09 00 00 00 01 00 00 00 03 00 00 00 01 00 00 00 0C 00 00 00 01 00 00 00 16 00 00 00 06 00 00 00 25 00 00 00 01 00 00 00 16 00 00 00 04 00 00 01 38 00 00 00 01 00 00 00 03 00 00 00 01 00 00 00 0B 00 00 00 01 00 00 00 15 00 00 00 06 00 00 00 26 00 00 00 01 00 00 00 15 00 00 00 04 00 00 00 FC 00 00 00 05 00 00 01 38 00 00 00 01 00 00 00 03 00 00 00 01 00 00 00 1B 00 00 00 09 00 00 00 01 00 00 00 1B 00 00 00 01 00 00 00 0A 00 00 00 01 00 00 00 03 00 00 00 06 00 00 00 27 00 00 00 05 00 00 00 94 00 00 00 05 00 00 00 30 00 00 00 01 00 00 00 04 00 00 00 01 00 00 00 10 00 00 00 01 00 00 00 1F 00 00 00 06 00 00 00 28 00 00 00 01 00 00 00 1F 00 00 00 01 00 00 00 04 00 00 00 09 00 00 00 01 00 00 00 12 00 00 00 01
 ```
 
@@ -58,4 +58,4 @@ this is examples output of those 3 files:
 0x0000000000000013 4294967295
 ```
 
-constants address are not disassembler address
+常量的地址和反汇编的地址不是一样的。
