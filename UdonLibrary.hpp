@@ -80,27 +80,27 @@ namespace Disassembler {
 			if (!UdonObject)
 				return;
 
-			Unity::CComponent* UdonBehaviour = UdonObject->GetComponent(XString("UdonBehaviour"));
+			Unity::CComponent* UdonBehaviour = UdonObject->GetComponent("UdonBehaviour");
 			if (!UdonBehaviour)
 				return;
 
-			Unity::CComponent* UdonProgram = UdonBehaviour->GetMemberValue<Unity::CComponent*>(XString("_program"));
+			Unity::CComponent* UdonProgram = UdonBehaviour->GetMemberValue<Unity::CComponent*>("_program");
 			if (!UdonProgram)
 				return;
 
-			Unity::CComponent* UdonSymbolTable = UdonProgram->GetMemberValue<Unity::CComponent*>(XString("SymbolTable"));
+			Unity::CComponent* UdonSymbolTable = UdonProgram->GetMemberValue<Unity::CComponent*>("SymbolTable");
 			if (!UdonSymbolTable)
 				return;
 
-			Unity::CComponent* UdonHeap = UdonProgram->GetMemberValue<Unity::CComponent*>(XString("Heap"));
+			Unity::CComponent* UdonHeap = UdonProgram->GetMemberValue<Unity::CComponent*>("Heap");
 			if (!UdonHeap)
 				return;
 
-			Unity::il2cppArray<unsigned char>* ByteCode = UdonProgram->GetMemberValue<Unity::il2cppArray<unsigned char>*>(XString("ByteCode"));
+			Unity::il2cppArray<unsigned char>* ByteCode = UdonProgram->GetMemberValue<Unity::il2cppArray<unsigned char>*>("ByteCode");
 			if (!ByteCode)
 				return;
 
-			auto _eventTable = UdonBehaviour->GetMemberValue<Unity::il2cppDictionary<Unity::System_String*, Unity::il2cppList<unsigned int>*>*>(XString("_eventTable"));
+			auto _eventTable = UdonBehaviour->GetMemberValue<Unity::il2cppDictionary<Unity::System_String*, Unity::il2cppList<unsigned int>*>*>("_eventTable");
 
 			std::string m_sDisassembled;
 
