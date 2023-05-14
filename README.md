@@ -11,7 +11,7 @@ due to EAC(Easy Anti-Cheat) exists, so you need find the way use the code yourse
 
 # Information
 
-by the default, Disassembler will dump 3 files WITHOUT postfix, they are ObjectName, bin_ObjectName, const_ObjectName
+by the default, Disassembler will dump 3 files WITHOUT extension, they are ObjectName, bin_ObjectName, const_ObjectName
 
 * ObjectName - contains Disassembled assembly code
 * bin_ObjectName - contains origin Opcode of the UdonSharp Script
