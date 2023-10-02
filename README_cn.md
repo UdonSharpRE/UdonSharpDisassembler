@@ -3,7 +3,7 @@ VRChat地图脚本 UdonSharp(U#) 的反汇编器
 
 # 笔记
 
-上面的代码使用了 (IL2CPP_Resolver)[https://github.com/sneakyevil/IL2CPP_Resolver]
+上面的代码使用了 [IL2CPP_Resolver](https://github.com/sneakyevil/IL2CPP_Resolver)
 
 由于 EAC(Easy Anti-Cheat) 的存在，所以你需要自己找办法使用这段代码，我不会帮你的。
 
