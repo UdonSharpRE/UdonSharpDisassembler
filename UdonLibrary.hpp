@@ -170,7 +170,7 @@ namespace Disassembler {
 						if(m_iAddress > 0) m_sDisassembled += SFormat(".end\n");
 						if (IsInASCII(m_sFuncSymbol))
 						{
-							m_sDisassembled += SFormat(".func_%s", m_sFuncSymbol);
+							m_sDisassembled += SFormat(".func_%s", m_sFuncSymbol.c_str());
 						}
 						else {
 							m_sDisassembled += SFormat(".func_%d", m_iAddress);
